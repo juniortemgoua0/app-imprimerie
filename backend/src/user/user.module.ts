@@ -12,7 +12,7 @@ import {ModelName} from "../helpers/model-name";
             {name: ModelName.USER, schema: UserSchema}
         ])
     ],
-    exports:[MongooseModule],
+    exports:[MongooseModule , UserService],
     providers: [UserService],
     controllers: [UserController]
 })

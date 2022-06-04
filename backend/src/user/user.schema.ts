@@ -1,5 +1,8 @@
 import {Prop, Schema, SchemaFactory} from "@nestjs/mongoose";
 import {Document} from "mongoose";
+import * as mongoose from "mongoose";
+import {ModelName} from "../helpers/model-name";
+import {DocumentM} from "../document/document.schema";
 
 export type UserDocument = User & Document
 
@@ -21,9 +24,14 @@ export class User {
     @Prop({required: true})
     registration_number: string
 
+    @Prop({required: true})
+    role: string
+
     @Prop({required: true, default: 1})
     status: string
 
+    @Prop({type: [{type: mongoose.Schema.Types.ObjectId, ref: ModelName.DOCUMENT}], default: []})
+    documents: DocumentM[]
 
 }
 

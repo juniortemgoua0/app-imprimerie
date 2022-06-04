@@ -1,4 +1,4 @@
-<template lang="">
+<template lang="html">
     <div>
         <!-- header -->
                 <div class="bg-white shadow px-2 py-4">

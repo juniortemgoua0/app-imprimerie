@@ -1,4 +1,4 @@
-<template lang="">
+<template lang="html">
     <div>
        <div class="dropzone border-2 border-blue-500 border-dashed" id="dropzone"
             @dragenter.prevent="toggleActive"

@@ -8,7 +8,7 @@ const routes = [
         component: ConnectUser
     },
     {
-        path: "/DashBoard",
+        path: "/DashBoard/:id",
         name: "DashBoard",
         component: DashBoard
     }

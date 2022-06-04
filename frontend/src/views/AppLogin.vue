@@ -1,4 +1,4 @@
-<template lang="">
+<template lang="html">
     <div class="d-card-h grid grid-cols-2">
         <diV class="form_card flex justify-center items-center">
             <form class="" >
