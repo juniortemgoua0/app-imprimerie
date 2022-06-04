@@ -68,7 +68,6 @@ export default {
     data: function() {
         return{
             dialog: false,
-            msg: 'delete',
         }
     },
     methods: {
@@ -77,13 +76,7 @@ export default {
         },
         closeDialog: function() {
             this.dialog = false
-        },
-        switchConfirmation: function(){
-            this.msg = 'delete'
-        },
-        switchConDelete: function(){
-            this.msg = 'confirmation'
-        },
+        }
         
     }
 }
