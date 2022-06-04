@@ -20,20 +20,25 @@
         <tr>
           <th class="border-collapse">Intitule</th>
           <th class="">Type document</th>
-          <th>Taille document</th>
           <th>Nombre de photocopie</th>
           <th>Date ajout</th>
-          <th>Etat</th>
+          <th>Status</th>
         </tr>
         </thead>
         <tbody>
         <tr v-for="document in documents" :key="document._id">
-          <td>{{ document.name }}</td>
+          <!-- <td>{{ document.name }}</td>
           <td class="">Control continue</td>
-          <td>220ko</td>
           <td>{{ document.print_count }}</td>
           <td>29/04/2022</td>
-          <td class="text-green-300" :style="{'color': !document.status ? 'red' : ''}">{{ document.status ? "Imprimee" : "En attente"}}</td>
+          <td class="text-green-300" :style="{'color': !document.status ? 'red' : ''}">
+            <button class="p-2">
+              {{ document.status ? "Imprimee" : "En attente"}}
+            </button>
+            <button>
+              <i class="fas fa-download"></i>
+            </button>
+          </td> -->
         </tr>
         </tbody>
       </table>
@@ -97,9 +102,9 @@ export default {
   components: {
     DropZone
   },
-  props:{
-    documents: []
-  },
+  // props:{
+  //   documents: []
+  // },
   data: function () {
     return {
       modale: false

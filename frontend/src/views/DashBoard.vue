@@ -147,7 +147,7 @@ import NotiFication from "../components/NotiFication.vue";
 import AppSettings from "../components/AppSettings.vue";
 import StateImp from "../components/StateImp.vue";
 import AppHeader from "./AppHeader.vue";
-import axios from "axios";
+// import axios from "axios";
 
 export default {
   components: {
@@ -171,8 +171,17 @@ export default {
     }
   },
   async mounted() {
-    const id = this.$route.params['id']
-    this.user = (await axios.get("http://localhost:3000/user/"+id)).data;
+    // const id = this.$route.params['id']
+    // this.user = (await axios.get("http://localhost:3000/user/"+id)).data;
+    this.user= {
+      "id": 1,
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "johnDoe@gmail.com",
+      "password": "123456",
+      "role": "user",
+      "registration_number": "123456789",
+    }
 
 
   },

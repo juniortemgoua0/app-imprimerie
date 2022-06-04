@@ -80,8 +80,8 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
-import {computed} from "vue";
+// import axios from 'axios'
+// import {computed} from "vue";
 
 export default {
   data() {
@@ -93,26 +93,26 @@ export default {
       load: false
     }
   },
-  provide(){
-    return {
-      user: computed(()=> this.data)
-    }
-  },
-  mounted() {
-  },
-  methods: {
-    async onsubmit() {
-      this.load = true
-      await axios.post('http://localhost:3000/auth/signin', this.data)
-          .then((response) => {
-            console.log(response.data)
-            this.load = false
-            this.$router.push("/DashBoard/" + response.data._id)
-          }).catch(() => {
-            this.load = false
-          })
-    }
-  }
+  // provide(){
+  //   return {
+  //     user: computed(()=> this.data)
+  //   }
+  // },
+  // mounted() {
+  // },
+  // methods: {
+  //   async onsubmit() {
+  //     this.load = true
+  //     await axios.post('http://localhost:3000/auth/signin', this.data)
+  //         .then((response) => {
+  //           console.log(response.data)
+  //           this.load = false
+  //           this.$router.push("/DashBoard/" + response.data._id)
+  //         }).catch(() => {
+  //           this.load = false
+  //         })
+  //   }
+  // }
 }
 </script>
 <style lang="css">
